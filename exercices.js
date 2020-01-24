@@ -52,7 +52,7 @@ function reverseString(x) {
 //9. x is an array, return an array removing the last 5 elements on x
 function removeLastFive(x) {
 	function removeFirstFive(x) {
-        for (let i =0; i < 5; i++) {
+        for (let i = 0; i < 5; i++) {
                 x.pop();
         }
         return x;
@@ -60,13 +60,61 @@ function removeLastFive(x) {
 
 //10. sum the digits of the number x
 function sumDigits(x) {
-	var numbers = 123;
-	var digits = numbers.toString().split("");//Separate values from strings onto array
-	var sum = 0;
-	
+	let digits = x.toString().split("");//Separate values from strings onto array
+	let sum = 0;
+	for (let i = 0; i < digits.length; i++) {
+		sum += Number(digits[i]);
+	}
+	return sum;
+}
 
 
 
 
+//24. Add something to the beggining and end of an array, repeat with Spread Operator
+var myArray = ['a', 'b', 'c', 'd'];
+myArray.push("end");
+myArray.unshift("start");
 
+myArray = ["start",...myArray];
+myArray = [...myArray,"end"];
+
+console.log(myArray);
+
+
+//25. How do you create a private variable in JavaScript?
+//Scope determines the accessibility (visibility) of variables: global scope (outside of functions) and local scope (inside of functions). Remember that in JS, objets and functions are also variables!
+
+function secretVariable() {
+	var private = "super secret code";
+	return function() {
+		return private;
+	}
+}
+
+var getPrivateVariable = secretVariable();
+console.log(getPrivateVariable()); //super secret code
+
+
+//26. What's the output?
+var num = 4;
+function outer() {
+	var num = 2;
+	function inner() {
+		num++;
+		var num = 3;
+		console.log(num);//	3
+	}
+	inner();
+}
+outer();
+
+
+//27. What's the output?
+console.log(typeof typeof 1);
+
+//Step 1:	typeof 1 = "number"
+//Step 2:	typeof "number" = "string"
+
+//	"string"
 
