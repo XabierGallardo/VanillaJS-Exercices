@@ -98,6 +98,25 @@ function sumDigits(x) {
 
 
 
+//11. x is an array of at least 2 unique elements, return the eleemnts that are on odd positions in the array
+function oddElements(x) {
+	for(let i = 0; i < x.length; i++) {
+		if(x[i] % 2 == 0) {
+		} else {
+			console.log(x[i]);
+		}
+	}
+}
+
+
+
+
+//12. x is an array of number, return elements on the array, where the value is equal to their index doubled
+// [3, 2, 4, 6, 7] returns [2, 4, 6] (having the indexes 1, 2, 3)
+
+
+
+
 //24. Add something to the beggining and end of an array, repeat with Spread Operator
 var myArray = ['a', 'b', 'c', 'd'];
 myArray.push("end");
@@ -173,3 +192,31 @@ while (x < 6) {
 	x++;
 }
 console.log(x);//	6
+
+
+
+
+//30. What's the output?
+function test(number) {
+	while(number < 5) {
+		number++;
+	}
+	return number;
+}
+alert(test(2));//	5
+
+
+
+
+//31. What's the output?
+var hero = {
+	_name: 'John Doe';
+	getSecretIdentity: function() {
+		return this._name;
+	}
+};
+var stoleSecretIdentity = hero.getSecretIdentity.bind(hero); 
+//bind creates a new function that has its "this" keyword set to the provided value, with a given sequence of arguments preceding any provide when the new function is called
+
+console.log(stoleSecretIdentity()); //	undefined
+console.log(hero.getSecretIdentity());//	John Doe
