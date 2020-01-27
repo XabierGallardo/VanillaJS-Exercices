@@ -117,6 +117,46 @@ function oddElements(x) {
 
 
 
+//13. x is a string, return true if every char in the string is an english vowel
+
+
+
+
+//14. x is an array of strings, return the longest string on x
+
+
+
+
+//15.x is a unix time stamp (seconds since jaunary 1, 1970). Return the month 1..12 that corresponds to the date
+
+
+
+
+//16. x is an arbitrarily nested, multidimensional array, return x flattened (all items in 1 dimension).
+
+
+
+
+//17. x is a string, return whether its parentheses are balanced, that;s, whether every openin (has a closing)
+
+
+
+
+//18. x is an array of at least 2 unique members, return 0 if it's not sorted, 1 if it's ascending, -1 if it's descending
+
+
+
+
+//19. x is an array of at least 1 item, return the most frequent item (there will always be just one).
+
+
+
+
+//20. x is an string (representing a file name). Return the file extension (everything after the last dot).
+
+
+
+
 //24. Add something to the beggining and end of an array, repeat with Spread Operator
 var myArray = ['a', 'b', 'c', 'd'];
 myArray.push("end");
