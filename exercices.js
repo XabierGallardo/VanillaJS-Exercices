@@ -260,3 +260,20 @@ var stoleSecretIdentity = hero.getSecretIdentity.bind(hero);
 
 console.log(stoleSecretIdentity()); //	undefined
 console.log(hero.getSecretIdentity());//	John Doe
+
+
+
+
+//32. given a string, reverse each other word in the sentence
+var string = "Welcome to the jungle";
+var reverseEntireSentence = reverseBySeparator(string, "");
+var reverseEachWord = reverseBySeparator(reverseEntireSentence, " ");
+
+function reverseBySeparator(string, separator) {
+  return string.split(separator).reverse().join(separator);
+}
+
+//33. How to empty an array in JavaScript?
+
+var arrayList = ['a', 'b', 'c', 'd', 'e'];
+arrayList = []; //Method 1
