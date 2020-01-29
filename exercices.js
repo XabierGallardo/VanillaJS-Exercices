@@ -123,8 +123,22 @@ function oddElements(x) {
 
 
 //14. x is an array of strings, return the longest string on x
-
-
+//ES6
+const strings = ["Hello", "World", "Yo!", "Havingthecráic"];
+let longest = strings.reduce((a, b) => a.length > b.length ? a: b, '');
+console.log(longest);
+//JS Version 
+var strings = ["Hello", "World", "Yo!", "Havingthecráic"];
+var longest = strings.reduce(function(a,b) {
+	return a.length > b.length ? a : b
+}, '');
+console.log(longest);
+/*EXTRA
+conditional ternary operator
+  	condition ? val1 : val2
+if condition is true, the operator has the value of val1, otherwise it has the value of val2
+	var status = (age >= 18) ? 'adult' : 'minor';
+*/
 
 
 //15.x is a unix time stamp (seconds since jaunary 1, 1970). Return the month 1..12 that corresponds to the date
@@ -273,7 +287,84 @@ function reverseBySeparator(string, separator) {
   return string.split(separator).reverse().join(separator);
 }
 
+
+
+
 //33. How to empty an array in JavaScript?
 
 var arrayList = ['a', 'b', 'c', 'd', 'e'];
 arrayList = []; //Method 1
+arrayList.length = 0; //Method 2
+arrayList.splice(0, arrayList.length); //Method 3
+
+
+
+
+//34. How to check if an object is an array or not 
+var arrayList = [1, 2, 3];
+
+//Method 1
+if($.isArray(arrayList)) {
+	console.log('Array');
+} else {
+	console.log('Not array');
+}
+
+//Method 2
+Array.isArray(arrayList);
+
+
+
+
+//35. How to check if a number is an integer
+function isInt(num) {
+	return num % 1 === 0;
+}
+
+
+
+
+//36. Write a function that allows you to do this 
+/*multiply(5)(6)*/
+
+function multiply(a){
+	return function multiply(b){
+		return a * b;
+	}
+}
+
+multiply(5)(6);
+
+
+
+
+//37. Each time an event listener button on a form is clicked, it reloads the page. How to avoid this?
+button.addEventListener('click', function(e) {
+	button.className = 'clicked';
+}, false);
+
+//Answer
+e.preventDefault();
+
+
+
+
+//38. Which statement references the DOM node created by the code shown?
+<p class="pull">lorem ipsum</p>
+
+//Answer	
+document.querySelector('.pull');
+
+
+
+
+//39. When would the final statement in the code shown be logged to the console?
+let modal = document.querySelector('#results');
+setTimeout(function() {
+	modal.classList.remove('hidden');
+}, 10000);
+console.log('Results shown');
+
+//Answer
+//Immediately
+
