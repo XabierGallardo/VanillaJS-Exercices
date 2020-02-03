@@ -1,0 +1,188 @@
+1.	What is JavaScript?
+JS is a lightweight, interpreted programming language and object-oriented. JavaScript is both client-side and server-side, can be inserted onto HTML pages and it's understood by browsers.
+
+
+
+2. 	Differences between Java and JavaScript
+- JavaScript is an object-oriented scripting language that allows to create dynamic HTML pages, allowing to process input data and maintain data, usually within the browser.
+
+- Java is a programming language, core set of libraries and virtual machine platform that allows to create compiled programs that run on every platform.
+
+- JavaScript is a great choice as a scripting language for a Java application.
+
+- Java is statically typed, compiles and runs on its own VM. JavaScript is dynamically typed, interpretd and runs in a browser. It's a great choice for client-side processing.
+
+
+
+3. 	Name some JavaScript features
+- JS is lightweight, interpreted programming language.
+- JS is designed for creating network-centric applications.
+- JS is complementary to and integrated with Java.
+- JavaScript is complementary to and integrated with HTML.
+- JavaScript is open and cross-platform.
+
+
+
+4.	Advantages of JavaScript
+- Less server interaction. You can validate user input before sending the page off to the server (saves traffis and load on the server).
+- Immediate feedback to the visitors. They don't have to wait for a page reload to see if they have forgotten to enter something.
+- Increased interactivity. You can create interfaces that react when he user hovers over them.
+- Richer interfaces.
+
+
+
+6.	What are JavaScript Data Types?
+Number, String, Boolean, Object and Undefined.
+
+
+
+7. 	What is the use of isNaN funtion?
+Returns true if the argument is not a number, otherwise is false
+
+
+
+8.	Is it possible to break JavaScript code into several lines?
+It can be done using a backslash:	alert("first line, \n second line");
+
+
+
+9.	What is a prompt box?
+A prompt box is a box which allows the user to input by providing a text box. Label and box will be provided.
+
+
+
+10. 	What is "this" keyword in JavaScript?
+"This" keyword refers to the object from where it was called.
+
+
+
+11. 	Explain timers in JavaScript
+Timers are used to execute a piece of code at a set time and also to repeat the code in a given interval of time.
+This is done by using the functions setTimeout(), setInterval() and clearInterval().
+
+setTimeout(function, delay);	Used to start a timer that calls a particular function after the delay. 
+setInterval(function, delay);	Used to repeatedly execute the given function in the mentioned delay and only halts when cancelled.
+clearInterval(id);		Instructs the timer to stop.
+
+
+
+12. 	Explain how you can submit a form using JavaScript
+document.form[0].submit();
+
+
+
+13. 	Does JavaScript support automatic type conversion?
+Yes, it's the common way of type conversion used by JavaScript developers.
+
+
+
+14. 	What are the looping structures in JavaScript?
+- For
+- While
+- Do-While loops
+
+
+
+15. 	What is called variable typing in JavaScript?
+i = 10;
+i = "string";
+
+
+
+16. 	How you can convert the string of any base to integer in JavaScript?
+parseInt();
+
+
+
+17. 	Explain the difference between "==" and "===="
+"==" checks only for equality in value
+"===" is a stricter equality and returns false if either the value or the type are different
+
+
+
+18. 	How to detect the OS on the client machine?
+Using the navigator.platform string
+
+console.log(navigator.platform);
+
+
+
+19. 	What is null in JavaScript?
+The NULL value is used to represent no value or no object.
+
+
+
+20. 	What is an undefined value in JavaScript?
+- Variable used in the code does't exist
+- Variable is not assigned to any value
+- Property doesn't exist
+
+
+
+21.	 What are all the types of pop up boxes available in JavaScript?
+- Alert
+- Confirm
+- Prompt
+
+
+
+22.	What is the use of Void(0)?
+Void(0) is used to prevent the page from refreshing and parameter "zero" is passed while calling.
+It's used to call another method without refreshing the page.
+
+
+
+23.	What is the data type of variables of in JavaScript?
+All variables in JavaScript are object data types.
+
+
+
+24. 	What are escape characters?
+Escape characters (backslash) are used when working with special characters.	console.log("this is a \"test\" ");
+
+
+
+25.	What are JavaScript Cookies?
+Cookies are the small test files stored in a computer and it gets created when the user visits the websites to store info they need.
+
+
+
+26.	What's the pop() method in JavaScript?
+The pop() method is similar as the shift() method, shift() works at the start of the array and pop() take the last element of the given array and returns it.
+
+
+
+27.	What's the difference between break and continue statements?
+Break statement exits from the current loop.
+Continue statement continues with the next statement of the loop.
+
+
+
+28.	What are the two basic groups of datatypes in JavaScript?
+Primitive types (boolean and numbers) and Reference types (strings and dates).
+
+
+
+29.	Explain JavaScript Objects
+Everything in JavaScript is an object. Booleans, numbers and strings can be objects (if defined with the new keyword).
+Dates, Maths, Regular expressions, Arrays, Function and Objects are always objects.
+
+All JS values except primitives (string, number, boolean, null, undefined) are objects.
+Objects are variables, can contain single values or objects inside.
+
+A JavaScript object is a collection of NAMED VALUES. The named values are called properties.
+Objects written as name value pairs are similar to HashMaps in Java.
+
+Methods are actions that can be performed on objects.
+Object properties can be both primitive values, other objects and functions.
+An object method is a object property containing a function definition.
+
+JavaScript Ojects are containers for named values, called properties and methods.
+
+
+
+30.	Explain JavaScript Scope
+Scope determines the accessibility of variables.
+In JavaScript there are two types of scope:
+- Local scope: Variables created inside a JS function
+- Global scope: Variables created outside a function

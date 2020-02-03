@@ -368,3 +368,7 @@ console.log('Results shown');
 //Answer
 //Immediately
 
+
+
+
+//40. 
