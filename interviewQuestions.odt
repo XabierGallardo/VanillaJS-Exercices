@@ -186,3 +186,19 @@ Scope determines the accessibility of variables.
 In JavaScript there are two types of scope:
 - Local scope: Variables created inside a JS function
 - Global scope: Variables created outside a function
+
+
+
+31. What is JSON?
+JSON stands for (JavaScript Object Notation), is a lightweight format for storing and transporting data.
+JSON is often used when data is sent from a server to a web page.
+
+JSON.stringify()	is used to send data converting into a string our JS object
+JSON.parse()		is used to transform our JSON string into a JS object
+
+
+
+32. How can we use AJAX in JavaScript?
+
+XMLHttpRequest object 
+$.ajax() Recommended
