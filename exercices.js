@@ -422,4 +422,14 @@ console.log('Results shown');
 
 
 
-//40. 
+//40. Define closure
+//In JS we need closures when a variable which is defined outside the scope in reference is accesed from some inner scope.
+var num = 10;
+function sum() {
+	document.writeln(num+num);
+}
+sum();
+
+
+
+//41. 

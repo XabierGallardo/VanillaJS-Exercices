@@ -189,7 +189,7 @@ In JavaScript there are two types of scope:
 
 
 
-31. What is JSON?
+31.	What is JSON?
 JSON stands for (JavaScript Object Notation), is a lightweight format for storing and transporting data.
 JSON is often used when data is sent from a server to a web page.
 
@@ -198,7 +198,49 @@ JSON.parse()		is used to transform our JSON string into a JS object
 
 
 
-32. How can we use AJAX in JavaScript?
+32. 	How can we use AJAX in JavaScript?
 
 XMLHttpRequest object 
 $.ajax() Recommended
+
+
+
+33. 	What is the difference between JavaScript and JScript?
+Netscape provided the JavaScript language. Microsoft changed the name and called it JScript to avoid the trademark issue. You can say JScript is the same as JavaScript, but Microsoft provides it.
+
+
+
+34. 	What is the use of window object?
+The window object is created automatically by the browser that represents a window of a broswer.
+It's not an object of JavaScript, it's a browser object.
+
+The windows object is used to display the popup dialog box.
+
+alert()
+confirm()
+prompt()
+open()
+close()
+setTimeout()
+
+
+
+35. 	What are the JavaScript data types?
+There are two types of data types in JavaScript
+
+1. Primitive Data Types: String, Number, Boolean, Undefined, Null
+2. Non-primitive Data Types: Object, Array, RegExp
+
+
+
+36.	How to create objects in JavaScript?
+
+1. By object literal
+2. By creating an instance of Object
+3. By Object Constructor
+
+
+
+37.	What is the difference between View state and Session state?
+View state is specific to a page in a session
+Session state is specific to a user or browser that can be acccessed across all pages in the web application
