@@ -1,3 +1,54 @@
+/*AJAX calls on JS*/
+//XMLHttpRequest
+const xhr = new XMLHttpRequest(),
+	method = "GET",
+	url = "https://developer.mozilla.org/";
+
+xhr.open(method, url, true);
+xhr.onreadystatechange = function() {
+	if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+		console.log(xhr.responseText);
+	}
+};
+
+xhr.send();
+
+//$.ajax()
+function checkUser () {
+	var user = {
+		id: "12345678A",
+		name: "Liam",
+		surname: "McGee",
+		address: "123 Craic Street"
+	}
+
+	var url = "https://developer.mozilla.org/";
+
+	$.ajax({
+		url: url,
+		type: "post",
+		dataType: "JSON",
+		contentType: "application/json",
+		success: function (data) {
+			alert(data);
+			var answer = data.name + " " + data.surname;
+			console.log(answer);
+		}
+	});
+}
+
+//To send data in JSON
+var myObj = {name: "John", age: 31, city: "New York"};
+var myJSON = JSON.stringify(myObj);
+window.location "demo_json.php?x=" + myJSON;
+
+//To receive data in JSON
+var myJSON = '{"name": "John", "age": 31, "city": "New York"}';
+var myObj = JSON.parse(myJSON);
+console.log("The name of my object is: " + myObj.name);
+
+
+/*EXERCICES*/
 //1. Return x doubled
 function double (x) {
 	return x * 2;
@@ -371,4 +422,14 @@ console.log('Results shown');
 
 
 
-//40. 
+//40. Define closure
+//In JS we need closures when a variable which is defined outside the scope in reference is accesed from some inner scope.
+var num = 10;
+function sum() {
+	document.writeln(num+num);
+}
+sum();
+
+
+
+//41. 
