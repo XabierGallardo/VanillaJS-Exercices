@@ -1,0 +1,21 @@
+1.	API: Application Programming Interface
+
+- App that allow two pieces of software talk to each other and share data.
+- REST is the most used API and JSON is the most popular format
+- API is not only a web app, can be the public function that connects us to a library
+
+
+2.	REST: Representational State Transfer
+
+- API architecture
+- Data can be stored on the cache
+- State is not sent on petitions
+- We can define which data will be accesible to other application
+
+
+
+3.	HTTP: Hyper Text Transfer Protocol
+
+- Protocol that rules on internet, allows to transmit information on internet using a petition-request system.
+- Some actions on API REST are: POST, GET, PATCH/PUT, DELETE
+- Some response codes are:	200(OK), 400(ERROR, can't access or resource doesn't exist), 500(UNESPECTED ERROR, server problem most of the cases)
