@@ -244,3 +244,24 @@ There are two types of data types in JavaScript
 37.	What is the difference between View state and Session state?
 View state is specific to a page in a session
 Session state is specific to a user or browser that can be acccessed across all pages in the web application
+
+
+
+38. 	What is MVC?
+Model - View - Controller is a pattern of design.
+The goal of this pattern is to split a largue application into specific sections, each one with its own purpose.
+		
+		The user sends a request to the controller
+- Controller: 	Handles the request flow, never handles data logic
+- Model:	Handles data logic, like interacting with the database		
+		After the model sends back data to the controller, then rends the data to the user (view)
+- View:		Handles data presentation, dynamically rendered
+		After the view returns its final presentation, it sends back the presentation to the controller
+		Finally the controller sends the response (presentation) to the user
+
+The model and the view never interact with each other, any interactions between the model and the view are done through the controller
+
+EXAMPLE
+- Model:		 SELECT * FROM dogs;
+- Controller:		if(success){ view.dogs } else { view.error }
+- View: 		<body><h1>Error</h1></body>
