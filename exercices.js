@@ -432,4 +432,31 @@ sum();
 
 
 
-//41. 
+
+//41. Create a function that generates an hour list from 9:00 to 21:30, incrementing 30 minutes
+for(var i = 9; i < 22; i++){
+  for (var j = 0; j <= 30; j+= 30){
+    if(j < 30){
+      console.log(i + ":0" + j);
+    }else{
+      console.log(i + ":" + j);
+    }
+  }
+}
+
+
+
+
+//42. Create a function that generates an hour list from 9:00 to 21:30, incrementing 5 minutes
+for(var i = 9; i < 22; i++){
+  for (var j = 0; j <= 55; j+= 5){
+    if(j < 10){
+      console.log(i + ":0" + j);
+    }else if (i === 21 && j === 35){
+ 	break;
+    }else{
+      console.log(i + ":" + j);
+    }
+  }
+}
+
