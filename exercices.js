@@ -1,5 +1,7 @@
-/*AJAX calls on JS*/
-//XMLHttpRequest
+//AJAX calls on JS///////////////////////////////////////////////////////////
+
+
+//XMLHttpRequest/////
 const xhr = new XMLHttpRequest(),
 	method = "GET",
 	url = "https://developer.mozilla.org/";
@@ -13,8 +15,10 @@ xhr.onreadystatechange = function() {
 
 xhr.send();
 
-//$.ajax()
+
+//$.ajax()/////
 function checkUser () {
+
 	var user = {
 		id: "12345678A",
 		name: "Liam",
@@ -37,10 +41,12 @@ function checkUser () {
 	});
 }
 
+
 //To send data in JSON
 var myObj = {name: "John", age: 31, city: "New York"};
 var myJSON = JSON.stringify(myObj);
 window.location "demo_json.php?x=" + myJSON;
+
 
 //To receive data in JSON
 var myJSON = '{"name": "John", "age": 31, "city": "New York"}';
@@ -48,8 +54,10 @@ var myObj = JSON.parse(myJSON);
 console.log("The name of my object is: " + myObj.name);
 
 
-/*EXERCICES*/
-//1. Return x doubled
+///////////////////////////////////////////////////////////////////////////
+
+
+//1.	Return x doubled
 function double (x) {
 	return x * 2;
 }
@@ -57,7 +65,7 @@ function double (x) {
 
 
 
-//2. x is a number, return x as a string
+//2.	x is a number, return x as a string
 function numberToString(x) {
 	return x + "";
 }
@@ -83,7 +91,7 @@ function square(x) {
 
 //5. x is an integer, return false if the number is odd and true if it's even
 function isEven(x) {
-	if (x % 2 == 0) {
+	if (x % 2 === 0) {
 		return true;
 	} else {
 		return false;
@@ -95,7 +103,7 @@ function isEven(x) {
 
 //6. x is an array, return an array removing the first 5 elements on x
 function removeFirstFive(x) {
-	for (let i =0; i < 5; i++) {
+	for (let i = 0; i < 5; i++) {
 		x.shift();
 	}
 	return x;
@@ -126,9 +134,8 @@ function reverseString(x) {
 
 //9. x is an array, return an array removing the last 5 elements on x
 function removeLastFive(x) {
-	function removeFirstFive(x) {
         for (let i = 0; i < 5; i++) {
-                x.pop();
+        	x.pop();
         }
         return x;
 }
@@ -149,10 +156,10 @@ function sumDigits(x) {
 
 
 
-//11. x is an array of at least 2 unique elements, return the eleemnts that are on odd positions in the array
+//11. x is an array of at least 2 unique elements, return the elements that are on odd positions in the array
 function oddElements(x) {
 	for(let i = 0; i < x.length; i++) {
-		if(x[i] % 2 == 0) {
+		if(x[i] % 2 === 0) {
 		} else {
 			console.log(x[i]);
 		}
@@ -459,4 +466,121 @@ for(var i = 9; i < 22; i++){
     }
   }
 }
+
+
+
+
+//43. Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string). 
+//Examples: 	solution('abc', 'bc') // returns true
+//		solution('abc', 'd') // returns false
+
+function solution(str, ending) {
+
+}
+
+
+
+
+/*44.	What is the output?
+	(function(){
+	  var a = b = 3;
+	})();
+
+	console.log("a defined? " + (typeof a !== 'undefined'));
+	console.log("b defined? " + (typeof b !== 'undefined'));*/
+
+//OUTPUT 
+a defined? false
+b defined? true
+
+//var a = b = 3; is shorthand for the statements b = 3; and var a = b;
+//b ends up being a global variable (since it is not preceded by the var keyword) and is therefore still in scope even outside of the enclosing function.
+
+
+
+
+/**/
+
+/*45.    Given a positive integer, write a function to check if it's a power of 2:
+ * Examples: 8=>true, 15=>false, 32=>true*/
+
+//Solution 1
+function isPowerOfTwo(x) {
+        if(x === 0) {
+                return false;
+        } if(x%2 === 0) {
+                return true;
+        } else {
+                return false;
+        }
+}
+
+
+//Solution 2
+function isPowerOfTwo(x) {
+        var division = x/2;
+        var solution = Number.isInteger(division);
+        if(solution === true) {
+                return true;
+        }else{
+                return false;
+        }
+}
+
+
+
+
+/*46.    Write a function to print the first 100 elements of the sequence 1, 3, 4, 13, 53, 690*/
+var sequence = [1,3];
+
+function mySequence() {
+        for (var i = 0; i < 101 ; i++) {
+        var a = sequence[sequence.length -2];
+        var b = sequence[sequence.length -1];
+        var c = (a * b) + 1;
+        sequence.push(c);
+        console.log(sequence[i]);
+    }
+}
+
+mySequence();
+
+
+
+
+/*47.    Given a string, write a function to print all possible permutations.
+ * Example: ABC => ABC ACB BAC BCA CAB CBA*/
+function permut(string) {
+        var results = [];
+
+        if(string.length < 2) {
+                return string;
+        }
+
+        for(var i = 0; i < string.length; i++) {
+                var firstChar = string[i];
+                var charsLeft = string.substring(0,i) + string.substring(i+1);
+                var innerPermutations = permut(charsLeft);
+
+                for(var j = 0; j < innerPermutations.length; j++) {
+                        results.push(firstChar + innerPermutations[j]);
+                }
+        }
+        return results;
+}
+
+permut("ABC"); // "ABC", "ACB", "BAC", "BCA", "CAB", "CBA" ]
+
+
+
+
+/*48.    Given a String, reverse the whole string without reversing the individual words in it.
+ * Example: "my favourite film is the lord of the rings" => "rings the of lord the is film favourite my"*/
+var string = "my favourite film is the lord of the rings";
+
+var separate = string.split(" ");
+
+var reverse = separate.reverse();
+
+console.log(reverse); //"rings", "the", "of", "lord", "the", "is", "film", "favourite", "my"
 
