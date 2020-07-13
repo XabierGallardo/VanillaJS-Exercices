@@ -584,3 +584,23 @@ var reverse = separate.reverse();
 
 console.log(reverse); //"rings", "the", "of", "lord", "the", "is", "film", "favourite", "my"
 
+
+
+
+/*49.	Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits.
+ * Examples:
+ * 1) n =   3, x = 1, y = 3 =>  true because   3 is divisible by 1 and 3
+ * 2) n =  12, x = 2, y = 6 =>  true because  12 is divisible by 2 and 6
+ * 3) n = 100, x = 5, y = 3 => false because 100 is not divisible by 3*/
+
+
+function isDivisible(n, x, y) {
+	var first = Number.isInteger(n / x);
+	var second = Number.isInteger(n / y);
+  
+	if (first === true && second === true) {
+		return true;
+    } else {
+		return false;
+    }
+}

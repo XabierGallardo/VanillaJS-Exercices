@@ -293,3 +293,28 @@ Cons:
 - Vague error messages
 - Extra layer of stuff to troubleshoot
 - Don't know where the package comes from
+
+
+
+
+40. Is 'return' neccesary in a JavaScript function?
+
+A function returns **undefined** by default. The use of  **return** is therefore only necessary if you want to override the default behaviour.
+
+- Short answer: no
+
+- Real answer: yes
+
+The JavaScript engine has to be notified that some function has finished its business, which is done by the function returning something. This is also why, instead of "finished", a function is said to "have returned".
+
+A function that lack an explicit return state will return *undefined*.
+
+###### Why most leave it out when they can
+The Javascript community seem to dislike unnecessary verbose code. It's a tendendency to write short and compact code.
+
+###### Why this may not the best practice for all
+The habit of always using return may serve as a good reminder that a function *always returns something* and thereby remind you to reflect on whether the default behaviour should be overrided.
+
+###### Conclusion
+As one gains experience the sport for less verbose code intensifies and in that context writing code just confirming default behaviour is an absolute no-go
+
