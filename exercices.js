@@ -593,7 +593,7 @@ console.log(reverse); //"rings", "the", "of", "lord", "the", "is", "film", "favo
  * 2) n =  12, x = 2, y = 6 =>  true because  12 is divisible by 2 and 6
  * 3) n = 100, x = 5, y = 3 => false because 100 is not divisible by 3*/
 
-
+//Solution 1
 function isDivisible(n, x, y) {
 	var first = Number.isInteger(n / x);
 	var second = Number.isInteger(n / y);
@@ -603,4 +603,23 @@ function isDivisible(n, x, y) {
     } else {
 		return false;
     }
+}
+
+//Solution 2
+function isDivisible(n, x, y) {
+  return (n % x === 0 && n % y === 0) ? true : false;
+}
+
+
+
+
+/*50.	Create a function that accepts a string parameter, and reverse each word in the string. All spaces in the string should be retained
+	Examples
+
+	"This is an example!" ==> "sihT si na !elpmaxe"
+	"double  spaces"      ==> "elbuod  secaps"
+*/
+
+function reverseWords (string) {
+  return string.split('').reverse().join('').split(' ').reverse().join(' ');
 }
